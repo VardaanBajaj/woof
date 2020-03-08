@@ -1,0 +1,11 @@
+G:\woof\wc\bin\Debug\netcoreapp3.1\wc.exe
+G:\woof\wc\bin\Debug\netcoreapp3.1\wc.deps.json
+G:\woof\wc\bin\Debug\netcoreapp3.1\wc.runtimeconfig.json
+G:\woof\wc\bin\Debug\netcoreapp3.1\wc.runtimeconfig.dev.json
+G:\woof\wc\bin\Debug\netcoreapp3.1\wc.dll
+G:\woof\wc\bin\Debug\netcoreapp3.1\wc.pdb
+G:\woof\wc\obj\Debug\netcoreapp3.1\wc.csprojAssemblyReference.cache
+G:\woof\wc\obj\Debug\netcoreapp3.1\wc.AssemblyInfoInputs.cache
+G:\woof\wc\obj\Debug\netcoreapp3.1\wc.AssemblyInfo.cs
+G:\woof\wc\obj\Debug\netcoreapp3.1\wc.dll
+G:\woof\wc\obj\Debug\netcoreapp3.1\wc.pdb
