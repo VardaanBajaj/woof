@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace woof.CodeAnalysis
+namespace woof.CodeAnalysis.Syntax
 {
     public sealed class SyntaxTree
     {

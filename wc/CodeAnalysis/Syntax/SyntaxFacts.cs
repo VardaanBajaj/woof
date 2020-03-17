@@ -1,4 +1,4 @@
-namespace woof.CodeAnalysis
+namespace woof.CodeAnalysis.Syntax
 {
     internal static class SyntaxFacts
     {

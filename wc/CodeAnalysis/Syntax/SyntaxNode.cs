@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace woof.CodeAnalysis
+namespace woof.CodeAnalysis.Syntax
 {
     public abstract class SyntaxNode
     {
