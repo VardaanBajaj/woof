@@ -1,7 +1,8 @@
 namespace woof.CodeAnalysis
 {
-    enum SyntaxKind
+    public enum SyntaxKind
     {
+        //Tokens
         NumberToken,
         WhitespaceToken,
         PlusToken,
@@ -12,6 +13,8 @@ namespace woof.CodeAnalysis
         CloseParanthesisToken,
         BadToken,
         EndOfFileToken,
+
+        //Expressions
         NumberExpression,
         BinaryExpression,
         ParenthesizedExpression

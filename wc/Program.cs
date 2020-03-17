@@ -6,10 +6,11 @@ using woof.CodeAnalysis;
 
 namespace woof
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
+            var showTree = false;
             while(true)
             {
                 Console.Write("> ");
@@ -22,15 +23,21 @@ namespace woof
                     Console.Clear();
                     continue;
                 }
+                else if(line == "#showTree")
+                {
+                    showTree = !showTree;
+                    Console.WriteLine(showTree ? "Showing Parse Tree" : "Not showing parse tree");
+                    continue;
+                }
 
                 var syntaxTree = SyntaxTree.Parse(line);
-                var color = Console.ForegroundColor;
-                Console.ForegroundColor = ConsoleColor.DarkGray;
 
-                PrettyPrint(syntaxTree.Root);
-
-                Console.ForegroundColor = color;
-
+                if(showTree)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    PrettyPrint(syntaxTree.Root);
+                    Console.ResetColor();
+                }
                 if (!syntaxTree.Diagnostics.Any())
                 {
                     var e = new Evaluator(syntaxTree.Root);
@@ -44,8 +51,7 @@ namespace woof
                     foreach (var diagnostic in syntaxTree.Diagnostics)
                         Console.WriteLine(diagnostic);
 
-                    Console.ForegroundColor = color;
-                }
+                    Console.ResetColor();                }
 
             }
         }
@@ -71,7 +77,7 @@ namespace woof
             Console.WriteLine();
 
 
-            indent += isLast ? "    " : "│   " ;
+            indent += isLast ? "   " : "│  " ;
 
             var lastChild=node.GetChildren().LastOrDefault();
 
