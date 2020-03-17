@@ -13,14 +13,15 @@ namespace woof.CodeAnalysis.Syntax
         }
 
         public IEnumerable<string> Diagnostics => _diagnostics;
-        private char Current   // get current char
+        private char Current => Peek(0);
+        private char LookAhead => Peek(1);
+
+        private char Peek(int offset)
         {
-            get
-            {
-                if(_position >= _text.Length)
-                    return '\0';
-                return _text[_position];
-            }
+            var index = _position + offset;
+            if (index >= _text.Length)
+                return '\0';
+            return _text[index];
         }
 
         private void Next()
@@ -65,6 +66,18 @@ namespace woof.CodeAnalysis.Syntax
                 return new SyntaxToken(SyntaxKind.WhitespaceToken, start, text, null);
             }
 
+            if(char.IsLetter(Current))
+            {
+                var start = _position;
+
+                while(char.IsLetter(Current))
+                    Next();
+                var length = _position - start;
+                var text = _text.Substring(start, length);
+                var kind = SyntaxFacts.GetKeywordKind(text);
+                return new SyntaxToken(kind, start, text, null);
+            }
+
             switch (Current)
             {
                 case '+':
@@ -79,6 +92,17 @@ namespace woof.CodeAnalysis.Syntax
                     return new SyntaxToken(SyntaxKind.OpenParenthesisToken, _position++, "(", null);
                 case ')':
                     return new SyntaxToken(SyntaxKind.CloseParanthesisToken, _position++, ")", null);
+                case '!':
+                    return new SyntaxToken(SyntaxKind.BangToken, _position++, "!", null);
+                case '&':
+                    if(LookAhead == '&')
+                        return new SyntaxToken(SyntaxKind.AmpersandAmpersandToken, _position+=2, "&&", null);
+                    break;
+                case '|':
+                    if(LookAhead == '|')
+                        return new SyntaxToken(SyntaxKind.PipePipeToken, _position+=2, "||", null);
+                    break;
+
             }
 
             _diagnostics.Add($"ERROR: Bad character input: '{Current}'");

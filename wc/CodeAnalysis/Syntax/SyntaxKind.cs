@@ -18,6 +18,12 @@ namespace woof.CodeAnalysis.Syntax
         LiteralExpression,
         BinaryExpression,
         ParenthesizedExpression,
-        UnaryExpression
+        UnaryExpression,
+        TrueKeyword,
+        FalseKeyword,
+        IdentifierToken,
+        BangToken,
+        PipePipeToken,
+        AmpersandAmpersandToken
     }
 }
