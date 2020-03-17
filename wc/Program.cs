@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using woof.CodeAnalysis;
+using woof.CodeAnalysis.Binding;
 using woof.CodeAnalysis.Syntax;
 
 namespace woof
@@ -32,6 +33,9 @@ namespace woof
                 }
 
                 var syntaxTree = SyntaxTree.Parse(line);
+                var binder = new Binder();
+                var boundExpression = binder.BindExpression(syntaxTree.Root);
+                var diagnostics = syntaxTree.Diagnostics.Concat(binder.Diagnostics).ToArray();
 
                 if(showTree)
                 {
@@ -39,9 +43,9 @@ namespace woof
                     PrettyPrint(syntaxTree.Root);
                     Console.ResetColor();
                 }
-                if (!syntaxTree.Diagnostics.Any())
+                if (!diagnostics.Any())
                 {
-                    var e = new Evaluator(syntaxTree.Root);
+                    var e = new Evaluator(boundExpression);
                     var result = e.Evaluate();
                     Console.WriteLine(result);
                 }
