@@ -15,7 +15,7 @@ namespace woof.CodeAnalysis
         EndOfFileToken,
 
         //Expressions
-        NumberExpression,
+        LiteralExpression,
         BinaryExpression,
         ParenthesizedExpression
     }
