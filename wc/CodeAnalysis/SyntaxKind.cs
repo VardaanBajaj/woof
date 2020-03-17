@@ -17,6 +17,7 @@ namespace woof.CodeAnalysis
         //Expressions
         LiteralExpression,
         BinaryExpression,
-        ParenthesizedExpression
+        ParenthesizedExpression,
+        UnaryExpression
     }
 }
