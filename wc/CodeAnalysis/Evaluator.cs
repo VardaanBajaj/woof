@@ -26,7 +26,7 @@ namespace woof.CodeAnalysis
             if(node is BoundUnaryExpression u)
             {
                 var operand = EvaluateExpression(u.Operand);
-                switch (u.OperatorKind)
+                switch (u.Op.Kind)
                 {
                     case BoundUnaryOperatorKind.Negation:
                         return  -(int)operand;
@@ -35,7 +35,7 @@ namespace woof.CodeAnalysis
                     case BoundUnaryOperatorKind.LogicalNegation:
                         return (bool) operand;
                     default:
-                        throw new Exception($"Unexpected unary operator {u.OperatorKind}");
+                        throw new Exception($"Unexpected unary operator {u.Op}");
                 }
             }
 
@@ -44,7 +44,7 @@ namespace woof.CodeAnalysis
                 var left = EvaluateExpression(b.Left);
                 var right = EvaluateExpression(b.Right);
 
-                switch (b.OperatorKind)
+                switch (b.Op.Kind)
                 {
                     case BoundBinaryOperatorKind.Addition:
                         return (int) left + (int) right;
@@ -59,7 +59,7 @@ namespace woof.CodeAnalysis
                     case BoundBinaryOperatorKind.LogicalOr:
                         return (bool) left || (bool) right;
                     default:
-                        throw new Exception($"Unexpected binary operator {b.OperatorKind}");
+                        throw new Exception($"Unexpected binary operator {b.Op}");
                 }
 
             }
