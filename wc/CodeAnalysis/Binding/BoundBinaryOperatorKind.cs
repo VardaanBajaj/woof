@@ -7,6 +7,8 @@ namespace woof.CodeAnalysis.Binding
         Multiplication,
         Division,
         LogicalAnd,
-        LogicalOr
+        LogicalOr,
+        NotEquals,
+        Equals,
     }
 }

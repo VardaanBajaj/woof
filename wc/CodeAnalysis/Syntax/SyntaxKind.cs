@@ -24,6 +24,8 @@ namespace woof.CodeAnalysis.Syntax
         IdentifierToken,
         BangToken,
         PipePipeToken,
-        AmpersandAmpersandToken
+        AmpersandAmpersandToken,
+        EqualsEqualsToken,
+        BangEqualsToken
     }
 }
