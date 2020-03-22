@@ -9,3 +9,6 @@ G:\woof\wc\obj\Debug\netcoreapp3.1\wc.AssemblyInfoInputs.cache
 G:\woof\wc\obj\Debug\netcoreapp3.1\wc.AssemblyInfo.cs
 G:\woof\wc\obj\Debug\netcoreapp3.1\wc.dll
 G:\woof\wc\obj\Debug\netcoreapp3.1\wc.pdb
+G:\woof\wc\bin\Debug\netcoreapp3.1\woof.dll
+G:\woof\wc\bin\Debug\netcoreapp3.1\woof.pdb
+G:\woof\wc\obj\Debug\netcoreapp3.1\wc.csproj.CopyComplete

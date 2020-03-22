@@ -1,0 +1,8 @@
+G:\woof\woof\bin\Debug\netstandard2.0\woof.deps.json
+G:\woof\woof\bin\Debug\netstandard2.0\woof.dll
+G:\woof\woof\bin\Debug\netstandard2.0\woof.pdb
+G:\woof\woof\obj\Debug\netstandard2.0\woof.csprojAssemblyReference.cache
+G:\woof\woof\obj\Debug\netstandard2.0\woof.AssemblyInfoInputs.cache
+G:\woof\woof\obj\Debug\netstandard2.0\woof.AssemblyInfo.cs
+G:\woof\woof\obj\Debug\netstandard2.0\woof.dll
+G:\woof\woof\obj\Debug\netstandard2.0\woof.pdb

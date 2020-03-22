@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {
       "wc/1.0.0": {
+        "dependencies": {
+          "woof": "1.0.0"
+        },
         "runtime": {
           "wc.dll": {}
+        }
+      },
+      "woof/1.0.0": {
+        "runtime": {
+          "woof.dll": {}
         }
       }
     }
   },
   "libraries": {
     "wc/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "woof/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
