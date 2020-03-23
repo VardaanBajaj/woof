@@ -8,14 +8,14 @@ namespace woof.CodeAnalysis
     internal sealed class Evaluator
     {
         private readonly BoundExpression _root;
-        private readonly Dictionary<string, object> _variables;
-        public Evaluator(BoundExpression root, Dictionary<string, object> variables)
+        private readonly Dictionary<VariableSymbol, object> _variables;
+        public Evaluator(BoundExpression root, Dictionary<VariableSymbol, object> variables)
         {
             _root = root;
             _variables = variables;
         }
 
-        public Dictionary<string, object> Varaibles { get; }
+        public Dictionary<VariableSymbol, object> Variables { get; }
 
         public object Evaluate()
         {
@@ -30,13 +30,13 @@ namespace woof.CodeAnalysis
 
             if(node is BoundVariableExpression v)
             {
-                return _variables[v.Name];
+                return _variables[v.Variable];
             }
 
             if(node is BoundAssignmentExpression a)
             {
                 var value = EvaluateExpression(a.Expression);
-                _variables[a.Name] = value;
+                _variables[a.Variable] = value;
                 return value;
             }
 
@@ -50,7 +50,7 @@ namespace woof.CodeAnalysis
                     case BoundUnaryOperatorKind.Identity:
                         return (int) operand;
                     case BoundUnaryOperatorKind.LogicalNegation:
-                        return (bool) operand;
+                        return !(bool) operand;
                     default:
                         throw new Exception($"Unexpected unary operator {u.Op}");
                 }
