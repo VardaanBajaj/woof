@@ -4,6 +4,8 @@ namespace woof.CodeAnalysis.Binding
     {
         UnaryExpression,
         LiteralExpression,
-        BinaryExpression
+        BinaryExpression,
+        AssignmentExpression,
+        VariableExpression
     }
 }
