@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "g:\\woof\\wc\\wc.csproj": {}
+    "G:\\woof\\wc\\wc.csproj": {}
   },
   "projects": {
-    "g:\\woof\\wc\\wc.csproj": {
+    "G:\\woof\\wc\\wc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "g:\\woof\\wc\\wc.csproj",
+        "projectUniqueName": "G:\\woof\\wc\\wc.csproj",
         "projectName": "wc",
-        "projectPath": "g:\\woof\\wc\\wc.csproj",
+        "projectPath": "G:\\woof\\wc\\wc.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "g:\\woof\\wc\\obj\\",
+        "outputPath": "G:\\woof\\wc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -25,8 +25,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "g:\\woof\\woof\\woof.csproj": {
-                "projectPath": "g:\\woof\\woof\\woof.csproj"
+              "G:\\woof\\woof\\woof.csproj": {
+                "projectPath": "G:\\woof\\woof\\woof.csproj"
               }
             }
           }
@@ -58,14 +58,14 @@
         }
       }
     },
-    "g:\\woof\\woof\\woof.csproj": {
+    "G:\\woof\\woof\\woof.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "g:\\woof\\woof\\woof.csproj",
+        "projectUniqueName": "G:\\woof\\woof\\woof.csproj",
         "projectName": "woof",
-        "projectPath": "g:\\woof\\woof\\woof.csproj",
+        "projectPath": "G:\\woof\\woof\\woof.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "g:\\woof\\woof\\obj\\",
+        "outputPath": "G:\\woof\\woof\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config"
