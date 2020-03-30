@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\woof\\woof\\woof.csproj": {}
+    "g:\\woof\\woof\\woof.csproj": {}
   },
   "projects": {
-    "G:\\woof\\woof\\woof.csproj": {
+    "g:\\woof\\woof\\woof.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\woof\\woof\\woof.csproj",
+        "projectUniqueName": "g:\\woof\\woof\\woof.csproj",
         "projectName": "woof",
-        "projectPath": "G:\\woof\\woof\\woof.csproj",
+        "projectPath": "g:\\woof\\woof\\woof.csproj",
         "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "G:\\woof\\woof\\obj\\",
+        "outputPath": "g:\\woof\\woof\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config"
