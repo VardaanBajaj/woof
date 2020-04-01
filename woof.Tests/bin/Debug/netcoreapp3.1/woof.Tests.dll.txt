@@ -1,6 +1,7 @@
 woof.Tests.CodeAnalysis.Syntax.LexerTests.Lexer_Lexes_Token
 woof.Tests.CodeAnalysis.Syntax.LexerTests.Lexer_Lexes_Token
 woof.Tests.CodeAnalysis.Syntax.LexerTests.Lexer_Lexes_Token
+woof.Tests.CodeAnalysis.Syntax.LexerTests.Lexer_Lexes_Token
 woof.Tests.CodeAnalysis.Syntax.LexerTests.Lexer_Lexes_TokenPairs
 woof.Tests.CodeAnalysis.Syntax.LexerTests.Lexer_Lexes_TokenPairs
 woof.Tests.CodeAnalysis.Syntax.LexerTests.Lexer_Lexes_TokenPairs
@@ -52,7 +53,9 @@ woof.Tests.CodeAnalysis.Syntax.ParserTests.Parser_BinaryExpression_HonorsPrecede
 woof.Tests.CodeAnalysis.Syntax.ParserTests.Parser_BinaryExpression_HonorsPrecedences
 woof.Tests.CodeAnalysis.Syntax.ParserTests.Parser_BinaryExpression_HonorsPrecedences
 woof.Tests.CodeAnalysis.Syntax.ParserTests.Parser_BinaryExpression_HonorsPrecedences
-woof.Tests.CodeAnalysis.Syntax.SyntaxFactTests.SyntaxFact_GetText_RoundTrips
+woof.Tests.CodeAnalysis.Syntax.ParserTests.Parser_UnaryExpression_HonorsPrecedences
+woof.Tests.CodeAnalysis.Syntax.ParserTests.Parser_UnaryExpression_HonorsPrecedences
+woof.Tests.CodeAnalysis.Syntax.ParserTests.Parser_UnaryExpression_HonorsPrecedences
 woof.Tests.CodeAnalysis.Syntax.SyntaxFactTests.SyntaxFact_GetText_RoundTrips
 woof.Tests.CodeAnalysis.Syntax.SyntaxFactTests.SyntaxFact_GetText_RoundTrips
 woof.Tests.CodeAnalysis.Syntax.SyntaxFactTests.SyntaxFact_GetText_RoundTrips
