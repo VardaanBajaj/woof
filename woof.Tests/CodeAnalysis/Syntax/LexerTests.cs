@@ -6,7 +6,7 @@ using Xunit;
 
 namespace woof.Tests.CodeAnalysis.Syntax
 {
-    public class LexerTest
+    public class LexerTests
     {
         [Theory]
         [MemberData(nameof(GetTokensData))]
