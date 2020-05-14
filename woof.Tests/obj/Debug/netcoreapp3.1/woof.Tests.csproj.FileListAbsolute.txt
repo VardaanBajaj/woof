@@ -94,3 +94,4 @@ G:\woof\woof.Tests\obj\Debug\netcoreapp3.1\woof.Tests.AssemblyInfo.cs
 G:\woof\woof.Tests\obj\Debug\netcoreapp3.1\woof.Tests.csproj.CopyComplete
 G:\woof\woof.Tests\obj\Debug\netcoreapp3.1\woof.Tests.dll
 G:\woof\woof.Tests\obj\Debug\netcoreapp3.1\woof.Tests.pdb
+g:\woof\woof.Tests\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll

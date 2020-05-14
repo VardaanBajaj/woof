@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+using System.Collections.Immutable;
 
 namespace woof.CodeAnalysis.Syntax
 {
     internal sealed class Parser
     {
-        private readonly SyntaxToken[] _tokens;
+        private readonly ImmutableArray<SyntaxToken> _tokens;
         private int _position;
         private readonly DiagnosticBag _diagnostics = new DiagnosticBag();
 
@@ -25,7 +26,7 @@ namespace woof.CodeAnalysis.Syntax
             }
             while(token.Kind != SyntaxKind.EndOfFileToken);
 
-            _tokens = tokens.ToArray();
+            _tokens = tokens.ToImmutableArray();
             _diagnostics.AddRange(lexer.Diagnostics);
         }
 
@@ -61,7 +62,7 @@ namespace woof.CodeAnalysis.Syntax
         {
             var expression = ParseExpression();
             var endOfFileToken = MatchToken(SyntaxKind.EndOfFileToken);
-            return new SyntaxTree(_diagnostics, expression, endOfFileToken);
+            return new SyntaxTree(_diagnostics.ToImmutableArray(), expression, endOfFileToken);
         }
 
         private ExpressionSyntax ParseExpression()
