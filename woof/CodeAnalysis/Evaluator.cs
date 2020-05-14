@@ -23,30 +23,18 @@ namespace woof.CodeAnalysis
         }
         private object EvaluateExpression(BoundExpression node)
         {
-            if(node is BoundLiteralExpression n)
+            switch (node.Kind)
             {
-                return EvaluateLiteralExpression(n);
-            }
-
-            if (node is BoundVariableExpression v)
-            {
-                return EvaluateVariableExpression(v);
-            }
-
-            if (node is BoundAssignmentExpression a)
-            {
-                return EvaluateAssignmentExpression(a);
-            }
-
-            if (node is BoundUnaryExpression u)
-            {
-                return EvaluateUnaryExpression(u);
-            }
-
-            if (node is BoundBinaryExpression b)
-            {
-                return EvaluateBinaryExpression(b);
-
+                case BoundNodeKind.LiteralExpression:
+                    return EvaluateLiteralExpression((BoundLiteralExpression)node);
+                case BoundNodeKind.VariableExpression:
+                    return EvaluateVariableExpression((BoundVariableExpression)node);
+                case BoundNodeKind.AssignmentExpression:
+                    return EvaluateAssignmentExpression((BoundAssignmentExpression)node);
+                case BoundNodeKind.UnaryExpression:
+                    return EvaluateUnaryExpression((BoundUnaryExpression)node);
+                case BoundNodeKind.BinaryExpression:
+                    return EvaluateBinaryExpression((BoundBinaryExpression)node);
             }
 
             throw new Exception($"Unexpected node {node.Kind}");
