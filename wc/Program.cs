@@ -41,7 +41,8 @@ namespace woof
                 if(showTree)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkGray;
-                    PrettyPrint(syntaxTree.Root);
+                    syntaxTree.Root.WriteTo(Console.Out);
+                    // PrettyPrint(syntaxTree.Root);
                     Console.ResetColor();
                 }
                 if (!diagnostics.Any())
@@ -77,37 +78,37 @@ namespace woof
             }
         }
 
-        static void PrettyPrint(SyntaxNode node, string indent="", bool isLast=true)
-        {
-            // ├──
+        // static void PrettyPrint(SyntaxNode node, string indent="", bool isLast=true)
+        // {
+        //     // ├──
 
-            // │
+        //     // │
 
-            // └──
+        //     // └──
 
-            var marker = isLast ? "└──": "├──" ;
+        //     var marker = isLast ? "└──": "├──" ;
 
-            Console.Write(indent);
-            Console.Write(marker);
-            Console.Write(node.Kind);
-            if(node is SyntaxToken t && t.Value != null)
-            {
-                Console.Write(" ");
-                Console.Write(t.Value);
-            }
-            Console.WriteLine();
-
-
-            indent += isLast ? "   " : "│  " ;
-
-            var lastChild=node.GetChildren().LastOrDefault();
+        //     Console.Write(indent);
+        //     Console.Write(marker);
+        //     Console.Write(node.Kind);
+        //     if(node is SyntaxToken t && t.Value != null)
+        //     {
+        //         Console.Write(" ");
+        //         Console.Write(t.Value);
+        //     }
+        //     Console.WriteLine();
 
 
-            foreach(var child in node.GetChildren())
-            {
-                PrettyPrint(child, indent, child==lastChild);
-            }
-        }
+        //     indent += isLast ? "   " : "│  " ;
+
+        //     var lastChild=node.GetChildren().LastOrDefault();
+
+
+        //     foreach(var child in node.GetChildren())
+        //     {
+        //         PrettyPrint(child, indent, child==lastChild);
+        //     }
+        // }
     }
 
 }
