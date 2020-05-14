@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using woof.CodeAnalysis.Syntax;
+using woof.CodeAnalysis.Text;
 
 namespace woof.CodeAnalysis
 {

@@ -1,3 +1,5 @@
+using woof.CodeAnalysis.Text;
+
 namespace woof.CodeAnalysis
 {
     public sealed class Diagnostic

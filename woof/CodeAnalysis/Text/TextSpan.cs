@@ -1,6 +1,6 @@
 using System;
 
-namespace woof.CodeAnalysis
+namespace woof.CodeAnalysis.Text
 {
     public struct TextSpan
     {
