@@ -17,11 +17,6 @@ namespace woof.CodeAnalysis.Syntax
 
         public override SyntaxKind Kind => SyntaxKind.ParenthesizedExpression;
 
-        public override IEnumerable<SyntaxNode> GetChildren()
-        {
-            yield return OpenParanthesisToken;
-            yield return Expression;
-            yield return CloseParanthesisToken;
-        }
+        
     }
 }
